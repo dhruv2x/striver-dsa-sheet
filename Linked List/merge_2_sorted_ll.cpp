@@ -1,21 +1,22 @@
  ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) 
-    {
-      
-  //Recursive way
+  {   
+      //Recursive way
       ListNode* ans;
       
       //In the case if 1 list reached to end and 
       //1 is still left to insert in merges list
+      
       if(list1==NULL)
       {
         return list2;
       }
+      
       if(list2==NULL)
       {
         return list1;
       }
-  
-      //Now compare values
+
+        //Now compare values
         if(list1->val<=list2->val)
         {
           ans=list1;  //Directly assign smaller values
@@ -27,10 +28,7 @@
           ans=list2;
           ans->next=mergeTwoLists(list1,list2->next);
           
-        }
-        
-        
-      
+        }      
       return ans;
       
       
