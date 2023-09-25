@@ -11,6 +11,5 @@ void deleteNode(ListNode* node)
       node->val=nxt->val;       //Vale is updated
       node->next=nxt->next; //next pointer also updated
       
-      delete nxt;
-        
+      delete nxt;  
     }
